@@ -3,9 +3,25 @@ body {
   background: #000;
   color: #fff;
   font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  font-size: 24px;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
+.terminal {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.output{
+  flex-grow: 1;
+}
+
+#command-input{
+  background: #000;
+  border: none;
+  color: #fff;
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  font-size: inherit;
+  outline: none;
+}
