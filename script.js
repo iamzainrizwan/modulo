@@ -9,9 +9,22 @@ input.addEventListener('keydown', function(event){
     var command = tokens[0];
     var response = "";
     switch (command) {
+      case "help":
+        reponse = `<pre>
+        help                list of available commands
+        whoami              who i am
+        ls                  list files
+        ls projects/        list projects
+        cat [file]          output file contents
+        uptime              time since i was born
+        tail -f status.log  what i'm working on right now
+        ps aux              achievements
+        clear               clear screen
+        </pre>`
+        break;
       case "whoami":
-        response = "zain - cs @ kcl (msci) · kcl cybersoc · coding tutor" + "<br>" + 
-                   "heading toward: sre / security engineering / distributed systems";
+        response = `zain - cs @ kcl (msci) · kcl cybersoc · coding tutor <br> 
+                   heading toward: sre / security engineering / distributed systems`;
         break;
       
       case "cat":
