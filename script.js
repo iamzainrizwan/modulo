@@ -18,7 +18,7 @@ ls projects/        list projects
 cat [file]          output file contents
 uptime              time since i was born
 tail -f status.log  what i'm working on right now
-ps aux              achievements
+pgrep -a zain       recent achievements
 clear               clear screen
         </pre>`;
         break;
