@@ -10,17 +10,17 @@ input.addEventListener('keydown', function(event){
     var response = "";
     switch (command) {
       case "help":
-        reponse = `<pre>
-        help                list of available commands
-        whoami              who i am
-        ls                  list files
-        ls projects/        list projects
-        cat [file]          output file contents
-        uptime              time since i was born
-        tail -f status.log  what i'm working on right now
-        ps aux              achievements
-        clear               clear screen
-        </pre>`
+        response = `<pre>
+help                list of available commands
+whoami              who i am
+ls                  list files
+ls projects/        list projects
+cat [file]          output file contents
+uptime              time since i was born
+tail -f status.log  what i'm working on right now
+ps aux              achievements
+clear               clear screen
+        </pre>`;
         break;
       case "whoami":
         response = `zain - cs @ kcl (msci) · kcl cybersoc · coding tutor <br> 
@@ -32,6 +32,20 @@ input.addEventListener('keydown', function(event){
         switch(parameter){
           case "about.txt":
             response = "home lab named after the library of alexandria - because if you're going to hoard knowledge, commit to the bit. currently running a node webapp and re::curse, occasionally catches fire (metaphorically). valhalla (razer blade 14 \'23, dual-boot) handles the rest. speakers don\'t work. it\'s fine (it\'s not)";
+            break;
+          case "achievements.txt":
+            response = `<pre>
+> 1st - kcl informatics puzzled
+> 2nd - uber global hackathon
+> kcl ctfs - 2x top 5
+            </pre>`;
+            break;
+          case "stack.txt":
+            response = `<pre>
+languages  > java, python, c#, bash
+infra      > linux, docker, azure, ssh tunnels into alexandria at 2am.
+security   > ctf tooling, wireshark, educated guessing.
+            </pre>`;
             break;
           default:
             response = "file does not exist!";
