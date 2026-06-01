@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,14 +11,17 @@
 
 <body>
   <div class="terminal">
-     <div id="output">
-     </div>   
-    <div class="input">
-        <span>zain@modul0:~$    </span> <input type=text id="command-input" name="command-input">
+    <div id="output">
+    </div>
+    <div id="input">
+      <span>zain@modul0:~$</span>
+      <form id="input-form">
+        <input type="text" id="command-input" name="command-input" enterkeyhint="send">
+      </form>
     </div>
   </div>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

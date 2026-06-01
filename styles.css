@@ -13,14 +13,18 @@ body {
   flex-direction: column;
 }
 
-.output{
-  flex-grow: 1;
+#output{
 }
 
-.input{
+#input{
   display: flex;
   width: 100%;
   gap: 8px;
+}
+
+#input-form{
+  display:flex;
+  flex:1;
 }
 
 #command-input{
