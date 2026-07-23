@@ -52,7 +52,13 @@ inputForm.addEventListener('submit', function (event) {
         var secs = Math.floor((diff % (1000 * 60)) / 1000);
         return `${years}y ${days}d ${hours}h ${mins}m ${secs}s`
       }
-      response = getUptime();
+      response = `<span id="uptime-display">${getUptime()}</span>`
+      setTimeout(() => {
+        setInterval(() => {
+          var el = document.getElementById("uptime-display");
+          if (el) el.innerHTML = getUptime() 
+        }, 1000);
+      }, 0);
       break;
     case "cat":
       var parameter = tokens[1];
