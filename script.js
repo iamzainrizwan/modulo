@@ -10,9 +10,27 @@ var aliases = {
 var argMap = {
   "tail": "status.txt",
   "pgrep": "achievements.txt"
-}
+};
 
-input.focus();
+var bootLines = [
+  "modul0 v0.1",
+  "initialising...",
+  "loading user zain rizwan...", 
+  "type <span id =\"accent\">help</span> for available commands"
+];
+i = 0
+input.disabled = true;
+bootLines.forEach(element => {
+  i++; 
+  setTimeout(() => {
+   output.innerHTML += "<p>" + element + "</p>";
+  }, i * 300);
+});
+setTimeout(() => {
+  document.getElementById("input").style.visibility = "visible";
+  input.disabled = false;
+  input.focus();
+}, (bootLines.length+1) * 300);
 
 inputForm.addEventListener('submit', function (event) {
   event.preventDefault();
@@ -34,8 +52,7 @@ inputForm.addEventListener('submit', function (event) {
   uptime              time since i was born
   tail -f status.log  what i'm working on right now
   pgrep -a zain       recent achievements
-  clear               clear screen
-      </pre>`;
+  clear               clear screen </pre>`;
       break;
     case "whoami":
       response = `zain - cs @ kcl (msci) · kcl cybersoc · coding tutor <br> 

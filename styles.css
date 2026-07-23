@@ -17,6 +17,7 @@ body {
 }
 
 #input{
+  visibility: hidden;
   display: flex;
   width: 100%;
   gap: 8px;
@@ -47,4 +48,8 @@ body {
 
 #error{
   color:#ff6978
+}
+
+#accent{
+  color:#a769ff
 }
