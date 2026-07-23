@@ -64,30 +64,28 @@ inputForm.addEventListener('submit', function (event) {
           response = `<pre>
   > 1st - kcl informatics puzzled
   > 2nd - uber global hackathon
-  > kcl ctfs - 2x top 5
-          </pre>`;
+  > kcl ctfs - 2x top 5 </pre>`;
           break;
         case "stack.txt":
           response = `<pre>
   languages  > java, python, c#, bash
   infra      > linux, docker, azure, ssh tunnels into alexandria at 2am.
-  security   > ctf tooling, wireshark, educated guessing.
-          </pre>`;
+  security   > ctf tooling, wireshark, educated guessing. </pre>`;
           break;
         case "status.txt":
           response = "probably ricing valhalla or thinking about buying a thinkpad";
           break;
         default:
-          response = "file does not exist!";
+          response = '<span id="error">file does not exist!</span>';
           break;
       }
       break;
 
     default:
-      response = "whatever you typed was stupid lol";
+      response = "<span id=\"error\">whatever you typed was stupid lol</span>";
       break;
   }
-  output.innerHTML += "<p>zain@modul0:~$ " + input.value + "<br>" + response + "</p>";
+  output.innerHTML += "<p><span id=\"user\">zain</span>@<span id=\"host\">modul0</span>:~$ " + input.value + "<br>" + response + "</p>";
   input.value = "";
   output.scrollTop = output.scrollHeight;
 });

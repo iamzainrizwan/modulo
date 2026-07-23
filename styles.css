@@ -36,3 +36,15 @@ body {
   outline: none;
   flex:1;
 }
+
+#user{
+  color: #a769ff
+}
+
+#host{
+  color: #a769ff
+}
+
+#error{
+  color:#ff6978
+}
